@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Lista de Supermercado</title>
+	<link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+	
+	<!-- h1{Lista Supermercado}	 -->
+	<h1>Lista Supermercado</h1>
+
+	<!-- div.inputs>input#nome-produto+input#quatidade-produto+input#preco-produto+button#incluir -->
+	<div class="inputs">
+		<label>Nome:</label>
+		<input type="text" id="nome-produto">
+		<label>Quantidade:</label>
+		<input type="number" min="1" id="quatidade-produto">
+		<label>Preço:</label>
+		<input type="number" min="0" id="preco-produto">
+		<button id="incluir" onclick="adicionaProduto()"> Adicionar Produto</button>
+		<button onclick="finalizar()">Finaliza Compra</button>
+	</div>
+
+	<table id="lista-de-produtos">
+		<thead>
+			<tr>
+				<td colspan="4">CUPOM FISCAL</td>
+			</tr>
+			<tr>
+				<td>No. Item </td>
+				<td>Nome Produto </td>
+				<td>Quantidade </td>
+				<td>Preço Unitário</td>
+			</tr>
+		</thead>
+		<tbody id="conteudo-nota">
+			<!-- Saída esperada:
+			<tr>
+				<td>1.</td>
+				<td>Leite em pó Molico 500g</td>
+				<td>2</td>
+				<td>R$ 7,50</td>
+			</tr>
+			 Fim saída esperada -->
+		</tbody>
+		<tfoot id="conteudoTotal">
+
+			<tr class="total-parcial">
+				<td colspan="3">Total Parcial: </td>
+				<td id="total-parcial">R$ 0,00</td>
+			</tr>
+			<!-- saída esperada: -->
+			<!-- <tr class="total">
+				<td colspan="3">Total: </td>
+				<td id= "total">R$ 0,00</td>
+			</tr> -->
+			<!-- fim saída esperada -->
+		</tfoot>
+
+	</table>
+
+	<script src="js/jquery-1.11.3.min.js"></script>
+	<script src="js/index.js"></script>
+</body>
+</html>
