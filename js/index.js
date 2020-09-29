@@ -111,6 +111,6 @@ function finalizar(){
 //     var data = JSON.stringify(objCompra);
 //     xhr.send(data);
 	xhr.open("GET", url+'/consultar', true);
-	xhr.send(data);
+	xhr.send();
 	
 }
