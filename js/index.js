@@ -103,6 +103,7 @@ function finalizar(){
 	// console.log(JSON.parse('{"oi" : "Tchau"}')); //transforma um JSON em Objeto
 
     
+    xhr.setRequestHeader("Accept", "*/*");
     xhr.setRequestHeader("Content-Type", "application/json");
     xhr.setRequestHeader("Access-Control-Allow-Origin", "*");
     
