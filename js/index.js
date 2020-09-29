@@ -104,6 +104,7 @@ function finalizar(){
 
     
     xhr.setRequestHeader("Content-Type", "application/json");
+    xhr.setRequestHeader("Access-Control-Allow-Origin", "*");
     
     var data = JSON.stringify(objCompra);
     xhr.send(data);
