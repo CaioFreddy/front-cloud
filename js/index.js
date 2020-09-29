@@ -97,20 +97,15 @@ function finalizar(){
 
 	console.log(objCompra);
     
-    var xhr = new XMLHttpRequest();
-    var url = "http://trabalhocloud-env-1.eba-cnimrayy.us-east-1.elasticbeanstalk.com";
-//     xhr.open("POST", url, true);
-// 	console.log(JSON.stringify(objCompra));//transforma um objeto em string, para add no BD
-// 	// console.log(JSON.parse('{"oi" : "Tchau"}')); //transforma um JSON em Objeto
-
-    
-//     xhr.setRequestHeader("Accept", "*/*");
-//     xhr.setRequestHeader("Content-Type", "application/json");
-//     xhr.setRequestHeader("Access-Control-Allow-Origin", "*");
-    
-//     var data = JSON.stringify(objCompra);
-//     xhr.send(data);
-	xhr.open("GET", url+'/consultar', true);
-	xhr.send();
+	var xhr = new XMLHttpRequest();
+    	var url = "http://trabalhocloud-env-1.eba-cnimrayy.us-east-1.elasticbeanstalk.com/incluir";
+    	xhr.open("POST", url, true);
+	console.log(JSON.stringify(objCompra));//transforma um objeto em string, para add no BD
 	
+    	xhr.setRequestHeader("Accept", "*/*");
+    	xhr.setRequestHeader("Content-Type", "application/json");
+    	xhr.setRequestHeader("Access-Control-Allow-Origin", "*");
+	    
+    	var data = JSON.stringify(objCompra);
+    	xhr.send(data);
 }
