@@ -1,0 +1,23 @@
+
+#lista-de-produtos {
+	background-color: #ffb600;
+}
+
+#lista-de-produtos thead tr:last-child td{
+	border-bottom: 2px solid;
+}
+
+#lista-de-produtos tbody tr td {
+	border-bottom: 2px dashed;
+	padding: 20px 10px;
+	text-align: center;
+}
+
+.total-parcial td{
+	background-color: grey;
+}
+
+.total td{
+	background-color: lightgrey;
+	color: red;
+}

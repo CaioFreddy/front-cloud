@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Nova Compra</title>
+	<link rel="stylesheet" href="css/nova_compra.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<!-- Template styles-->
+	<link rel="stylesheet" href="css/style.css">
+	<!-- Responsive styles-->
+	<link rel="stylesheet" href="css/responsive.css">
+	<!-- FontAwesome -->
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<!-- Animation -->
+	<link rel="stylesheet" href="css/animate.css">
+	<!-- Owl Carousel -->
+	<link rel="stylesheet" href="css/owl.carousel.min.css">
+	<link rel="stylesheet" href="css/owl.theme.default.min.css">
+	<!-- Colorbox -->
+	<link rel="stylesheet" href="css/colorbox.css">
+</head>
+<body>
+	
+	<!-- h1{Lista Supermercado}	 -->
+        <header id="header" class="header-one">
+			<div class="container">
+				<div class="row">
+					<div class="logo-area clearfix">
+						<div class="logo col-xs-12 col-md-3">
+							<a href="index.html">
+								<img src="images/logo.png" alt="">
+							</a>
+						</div><!-- logo end -->
+
+						<div class="col-xs-12 col-md-9 header-right">
+							
+						</div><!-- header right end -->
+					</div><!-- logo area end -->
+
+				</div><!-- Row end -->
+			</div><!-- Container end -->
+
+			
+		</header>
+	<!-- div.inputs>input#nome-produto+input#quatidade-produto+input#preco-produto+button#incluir -->
+	<center>
+	<nav class="site-navigation navigation navdown" style="background: #000000;">
+		<div class="container">
+			<div class="row">
+				<div class="inputs">
+					<label>CPF:</label>
+					<input type="text" id="edtCPF" style="color:#000000" value="">
+					<label>Item:</label>
+					<input type="text" id="nome-produto" style="color:#000000" value="">
+					<label>Quantidade:</label>
+					<input type="number" min="1" id="quantidade-produto" style="color:#000000" value="">
+					<label>Preço:</label>
+					<input type="number" min="0" id="preco-produto" style="color:#000000" value="">
+					<button id="incluir" class="btn btn-primary" onclick="adicionaProduto()"> Adicionar Produto</button>
+				</div>
+			</div>
+		</div>
+	</nav>
+	<table id="lista-de-produtos">
+		<thead>
+			<tr>
+				<td colspan="4">CUPOM FISCAL</td>
+			</tr>
+			<tr>
+				<td colspan="4"> <span id="CPFInfo">CPF: </span> </td>
+			</tr>
+			<tr>
+				<td>No. Item </td>
+				<td>Nome Produto </td>
+				<td>Quantidade </td>
+				<td>Preço Unitário</td>
+			</tr>
+		</thead>
+		<tbody id="conteudo-nota">
+			<!-- Saída esperada:
+			<tr>
+				<td>1.</td>
+				<td>Leite em pó Molico 500g</td>
+				<td>2</td>
+				<td>R$ 7,50</td>
+			</tr>
+			 Fim saída esperada -->
+		</tbody>
+		<tfoot id="conteudoTotal">
+
+			<tr class="total-parcial">
+				<td colspan="3">Total Parcial: </td>
+				<td id="total-parcial">R$ 0,00</td>
+				<td />
+			</tr>
+			<!-- saída esperada: -->
+			<!-- <tr class="total">
+				<td colspan="3">Total: </td>
+				<td id= "total">R$ 0,00</td>
+			</tr> -->
+			<!-- fim saída esperada -->
+			<tr>
+				<td colspan="5" align="center" style="background-color: black"><button id="finalizar" class="btn btn-primary" onclick="finalizar()">Finaliza Compra</button></td>
+			</tr>
+		</tfoot>
+		<tfoot>
+		</tfoot>
+
+	</table>
+	</center>
+	
+	<script src="js/jquery-1.11.3.min.js"></script>
+	<script src="js/nova_compra.js"></script>
+</body>
+</html>
